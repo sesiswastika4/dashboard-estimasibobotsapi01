@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Estimasi Bobot Sapi</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+
+    <h1>
+        Estimasi Bobot Sapi
+    </h1>
+
+    <!-- UPLOAD -->
+
+    <div class="top-buttons">
+
+        <label class="btn camera-btn">
+
+            <i class="fas fa-camera"></i>
+
+            <span>Kamera</span>
+
+            <input
+                type="file"
+                id="cameraInput"
+                accept="image/*"
+                capture="environment"
+                hidden>
+
+        </label>
+
+        <label class="btn file-btn">
+
+            <i class="fas fa-file-image"></i>
+
+            <span>File</span>
+
+            <input
+                type="file"
+                id="fileInput"
+                accept="image/*"
+                hidden>
+
+        </label>
+
+    </div>
+
+    <!-- CANVAS -->
+
+    <div id="canvasContainer">
+
+        <canvas id="canvas"></canvas>
+
+    </div>
+
+
+    <!-- HASIL -->
+
+    <div class="result-area">
+
+        <!-- PANJANG BADAN -->
+
+        <div class="card">
+
+            <h3>Panjang Badan</h3>
+
+            <p id="pb">
+                0 cm
+            </p>
+
+        </div>
+
+        <!-- INPUT LD -->
+
+        <div class="card">
+
+            <h3>Lingkar Dada</h3>
+
+            <div class="input-wrapper">
+
+                <input
+                    type="number"
+                    id="ldInput"
+                    min="0"
+                    step="0.1"
+                    placeholder="Masukkan cm">
+
+                <span>cm</span>
+
+            </div>
+
+        </div>
+
+        <!-- ESTIMASI -->
+
+        <div class="card big">
+
+            <h3>Estimasi Bobot</h3>
+
+            <p id="bb">
+                0 kg
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- LEGENDA -->
+
+    <div class="legend">
+
+        <div class="legend-item">
+
+            <div class="color-box green"></div>
+
+            <span>
+                Marker HVS A4
+            </span>
+
+        </div>
+
+        <div class="legend-item">
+
+            <div class="color-box red"></div>
+
+            <span>
+                Marker Panjang Badan
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- KIRIM -->
+
+    <button id="sendBtn">
+
+        Kirim Data
+
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
