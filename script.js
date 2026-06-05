@@ -133,10 +133,10 @@ function resetMarkers(){
     const cy = canvas.height / 2;
 
     hvsMarkers = [
-        {x:cx-35,y:cy-20},
-        {x:cx+35,y:cy-20},
-        {x:cx+35,y:cy+20},
-        {x:cx-35,y:cy+20}
+        {x:cx-22,y:cy-15},
+        {x:cx+22,y:cy-15},
+        {x:cx+22,y:cy+15},
+        {x:cx-22,y:cy+15}
     ];
 
     const bodyHalfLength = canvas.width * 0.12;
